@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+/* Tailwind v4: make "dark:" classes follow a .dark class on <html>,
+   so our toggle button controls the theme instead of the OS setting */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Smooth scrolling when clicking navbar links */
+html {
+  scroll-behavior: smooth;
+}
