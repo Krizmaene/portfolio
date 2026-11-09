@@ -1,5 +1,7 @@
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import About from './components/About'
+import Skills from './components/Skills'
 import { useTheme } from './hooks/useTheme'
 
 function App() {
@@ -11,12 +13,9 @@ function App() {
 
       <main>
         <Hero />
-        <section id="about" className="mx-auto min-h-[70vh] max-w-5xl scroll-mt-20 px-6 py-20">
-          <h2 className="text-2xl font-bold">About</h2>
-        </section>
-        <section id="skills" className="mx-auto min-h-[70vh] max-w-5xl scroll-mt-20 px-6 py-20">
-          <h2 className="text-2xl font-bold">Skills</h2>
-        </section>
+        <About />
+        <Skills />
+        
         <section id="projects" className="mx-auto min-h-[70vh] max-w-5xl scroll-mt-20 px-6 py-20">
           <h2 className="text-2xl font-bold">Projects</h2>
         </section>
