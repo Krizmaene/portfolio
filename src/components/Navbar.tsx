@@ -23,7 +23,7 @@ function Navbar({ theme, onToggleTheme }: Props) {
             <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
                 <a href="#home" className="font-bold text-stone-900 dark:text-stone-50">
                     {/* TODO: your name or initials */}
-                    Your Name
+                    My Portfolio
                 </a>
 
                 {/* Desktop links */}

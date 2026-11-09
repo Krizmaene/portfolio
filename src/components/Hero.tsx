@@ -5,17 +5,17 @@ function Hero() {
             className="mx-auto flex min-h-[80vh] max-w-5xl flex-col justify-center px-6 py-20"
         >
             <p className="mb-3 text-sm font-medium uppercase tracking-widest text-amber-700 dark:text-amber-400">
-                Hello, I'm
+                Hello, I'm Krizmaene
             </p>
 
             {/* TODO: your full name */}
             <h1 className="text-4xl font-bold text-stone-900 sm:text-6xl dark:text-stone-50">
-                Your full name
+                KRIZMAENE AIRIZH A. MAGBOJOS
             </h1>
 
             {/* TODO: replace [COURSE] with your course */}
             <p className="mt-4 max-w-2xl text-lg text-stone-600 dark:text-stone-300">
-                Graduating [COURSE] student interested in UI/UX and front-end development.
+                Graduating Computer Science student interested in UI/UX and front-end development.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
