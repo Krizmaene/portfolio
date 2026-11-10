@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer className="border-t border-stone-200 py-8 text-center text-sm text-stone-500 dark:border-stone-800 dark:text-stone-400">
+        <footer className="border-t border-brand py-8 text-center text-sm text-white/60">
             © {new Date().getFullYear()} Krizmaene Airizh A. Magbojos
         </footer>
     )

@@ -18,12 +18,15 @@ const contactLinks = [
 
 function Contact() {
     return (
-        <section id="contact" className="mx-auto max-w-5xl scroll-mt-20 px-6 py-20">
-            <h2 className="text-2xl font-bold text-stone-900 dark:text-stone-50">
+        <section id="contact" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-12 md:py-16">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
+                Get in touch
+            </p>
+            <h2 className="text-3xl font-bold">
                 Contact
             </h2>
 
-            <p className="mt-4 max-w-2xl text-stone-600 dark:text-stone-300">
+            <p className="mt-4 max-w-2xl leading-relaxed text-white/90">
                 I’m looking for an OJT placement in UI/UX design or front-end development. Feel free to reach out.
             </p>
 
@@ -34,13 +37,13 @@ function Contact() {
                             href={link.href}
                             target={link.label === 'Email' ? undefined : '_blank'}
                             rel="noreferrer"
-                            className="block rounded-xl border border-stone-200 p-5 hover:border-amber-700 dark:border-stone-800 dark:hover:border-amber-400"
+                            className="group block rounded-2xl border border-brand bg-brand/20 p-5 transition hover:-translate-y-1 hover:border-accent"
                         >
-                            <span className="block text-sm font-medium text-stone-500 dark:text-stone-400">
+                            <span className="text-xs font-semibold uppercase tracking-widest text-accent">
                                 {link.label}
                             </span>
-                            <span className="mt-1 block break-all text-stone-900 dark:text-stone-50">
-                                {link.value}
+                            <span className="mt-2 block break-all text-white">
+                                {link.label === 'Email' ? 'Send an email →' : 'Open →'}
                             </span>
                         </a>
                     </li>

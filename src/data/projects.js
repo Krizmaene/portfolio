@@ -1,11 +1,4 @@
-export type Project = {
-    title: string
-    description: string
-    images: string[]
-    github?: string
-}
-
-export const projects: Project[] = [
+export const projects = [
     {
         title: 'Pinoy Recipe Finder',
         description: 'A web app for browsing Filipino recipes, with search, a favorites list, and a details page showing ingredients and instructions.',

@@ -1,9 +1,4 @@
-export type SkillGroup = {
-    title: string
-    items: string[]
-}
-
-export const skillGroups: SkillGroup[] = [
+export const skillGroups = [
     {
         title: 'Programming and Web',
         items: ['JavaScript', 'TypeScript', 'HTML', 'CSS', 'Java', 'Python', 'C++', 'R'],
