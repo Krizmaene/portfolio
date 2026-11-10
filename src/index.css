@@ -1,10 +1,21 @@
 @import "tailwindcss";
 
-/* Tailwind v4: make "dark:" classes follow a .dark class on <html>,
-   so our toggle button controls the theme instead of the OS setting */
+/* Keeps "dark:" classes working while we redesign section by section */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Smooth scrolling when clicking navbar links */
+/* Design tokens from the Figma: use them as bg-navy, bg-brand, text-accent, etc. */
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-navy: #010736;    /* page background */
+  --color-brand: #22396F;   /* buttons, outlines, skill tags */
+  --color-accent: #7FB0FF;  /* highlights and hover (my pick; change it if you like) */
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-navy);
+  color: white;
 }

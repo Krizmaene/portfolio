@@ -11,9 +11,8 @@ export const skillGroups: SkillGroup[] = [
     {
         title: 'Frameworks and Libraries',
         items: [
-            'React (Hooks, Context API, Router)',
+            'React (Vite)',
             'React Native (Expo)',
-            'React Navigation',
             'Tailwind CSS',
             'Bootstrap',
         ],
@@ -23,13 +22,11 @@ export const skillGroups: SkillGroup[] = [
         items: [
             'MongoDB',
             'AsyncStorage',
-            'REST API Integration (Axios)',
             'Git and GitHub',
-            'Vite',
         ],
     },
     {
         title: 'Design',
-        items: ['Figma', 'Basic Layout and Typography', 'Dark and Light Mode Theming'],
+        items: ['Figma', 'Wireframing', 'Prototyping', 'Basic Layout and Typography'],
     },
 ]
