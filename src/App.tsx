@@ -3,6 +3,8 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
+import Footer from './components/Footer'
 import { useTheme } from './hooks/useTheme'
 
 function App() {
@@ -17,11 +19,10 @@ function App() {
         <About />
         <Skills />
         <Projects />
-        
-        <section id="contact" className="mx-auto min-h-[70vh] max-w-5xl scroll-mt-20 px-6 py-20">
-          <h2 className="text-2xl font-bold">Contact</h2>
-        </section>
+        <Contact />
       </main>
+
+      <Footer />
     </div>
   )
 }
