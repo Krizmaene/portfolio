@@ -2,7 +2,6 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Colors from the Figma. Same token names as before, so existing classes still work */
 @theme {
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
   --color-navy: #290044;    /* gradient start, and the photo viewer background */
@@ -19,7 +18,6 @@ body {
   color: white;
 }
 
-/* Page padding shared by every section: 108px side margins at 1920px, like the Figma */
 .container-x {
   margin-inline: auto;
   width: 100%;
@@ -33,7 +31,6 @@ body {
   .container-x { padding-inline: 108px; }
 }
 
-/* One gradient per section, exactly as set in the Figma */
 .bg-hero     { background: linear-gradient(90deg,  #290044, #000000); }
 .bg-about    { background: linear-gradient(180deg, #290044, #000000); }
 .bg-skills   { background: linear-gradient(135deg, #290044, #000000); }

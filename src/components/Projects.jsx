@@ -3,7 +3,6 @@ import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
 import ProjectModal from './ProjectModal'
 
-// Big outline arrow drawn as an SVG, so it takes the text color
 function Arrow({ direction }) {
   return (
     <svg
@@ -14,7 +13,7 @@ function Arrow({ direction }) {
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
-      className={`h-8 w-14 xl:h-10 xl:w-16 ${direction === 'right' ? 'rotate-180' : ''}`}
+      className={`h-8 w-14 ${direction === 'right' ? 'rotate-180' : ''}`}
     >
       <path d="M46 12H3M13 2 3 12l10 10" />
     </svg>
@@ -37,10 +36,10 @@ function Projects() {
     'hover:text-accent md:block'
 
   return (
-    <section id="projects" className="bg-projects min-h-screen pb-16 pt-32 xl:pt-44">
+    <section id="projects" className="bg-projects min-h-screen pb-16 pt-32">
       <div className="container-x">
-        <p className="text-base text-accent xl:text-2xl">My Work</p>
-        <h2 className="mt-1 text-4xl font-bold xl:text-6xl">Projects</h2>
+        <p className="text-base text-accent">My Work</p>
+        <h2 className="mt-1 text-4xl font-bold">Projects</h2>
 
         {/* Arrows sit on the sides on larger screens; on phones you just swipe */}
         <div className="relative mt-10 md:px-20">
@@ -52,7 +51,7 @@ function Projects() {
           <div
             ref={scroller}
             className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 pt-2
-                       [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+                       scrollbar-none [&::-webkit-scrollbar]:hidden"
           >
             {projects.map((project, i) => (
               <ProjectCard
@@ -70,7 +69,6 @@ function Projects() {
           </button>
         </div>
 
-        {/* The key resets the photo counter whenever a different project opens */}
         {selected && (
           <ProjectModal
             key={selected.title}

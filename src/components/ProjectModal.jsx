@@ -14,7 +14,6 @@ function ProjectModal({ project, onClose }) {
     [images.length],
   )
 
-  // Esc closes, arrow keys flip photos, and the page behind stops scrolling
   useEffect(() => {
     const onKey = (e) => {
       if (e.key === 'Escape') onClose()
@@ -30,10 +29,9 @@ function ProjectModal({ project, onClose }) {
   }, [onClose, prev, next, images.length])
 
   return (
-    // Clicking the dark backdrop closes the viewer
     <div
       onClick={onClose}
-      className="fixed inset-0 z-[60] flex items-center justify-center bg-black/80 p-4"
+      className="fixed inset-0 z-60 flex items-center justify-center bg-black/80 p-4"
     >
       <div
         role="dialog"

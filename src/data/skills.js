@@ -1,4 +1,3 @@
-// Edit this file to change skills. A group with "logos" shows icons; a group with "items" shows tags.
 export const skillGroups = [
   {
     title: 'Programming and Web',

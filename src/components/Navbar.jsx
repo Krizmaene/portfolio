@@ -40,15 +40,15 @@ function Navbar() {
     // Fixed at the top, slightly see-through so each section's gradient shows behind it
     <header className="fixed inset-x-0 top-0 z-50 bg-black/20 backdrop-blur-md">
       <nav className="container-x flex items-center justify-between py-5">
-        <a href="#home" className="text-2xl font-medium text-white xl:text-4xl">
+        <a href="#home" className="text-2xl font-medium text-white">
           Krizmaene
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-10 md:flex xl:gap-16">
+        <ul className="hidden items-center gap-10 md:flex">
           {links.map((link) => (
             <li key={link.id}>
-              <a href={`#${link.id}`} className={`${linkClass(link.id)} text-base xl:text-2xl`}>
+              <a href={`#${link.id}`} className={`${linkClass(link.id)} text-sm`}>
                 {link.label}
               </a>
             </li>

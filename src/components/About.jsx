@@ -1,10 +1,10 @@
 function About() {
   return (
-    <section id="about" className="bg-about min-h-screen pb-16 pt-32 xl:pt-44">
+    <section id="about" className="bg-about min-h-screen pb-16 pt-32">
       <div className="container-x">
-        <h2 className="text-4xl font-bold xl:text-6xl">About Me</h2>
+        <h2 className="text-4xl font-bold">About Me</h2>
 
-        <div className="mt-8 max-w-5xl space-y-8 text-lg leading-normal xl:mt-12 xl:text-2xl">
+        <div className="mt-8 max-w-5xl space-y-8 text-lg leading-normal">
           <p>
             I am a graduating Computer Science student at De La Salle Lipa. I
             enjoy exploring web development, software development, and UI/UX
