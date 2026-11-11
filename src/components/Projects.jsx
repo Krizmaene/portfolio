@@ -3,10 +3,27 @@ import { projects } from '../data/projects'
 import ProjectCard from './ProjectCard'
 import ProjectModal from './ProjectModal'
 
+// Big outline arrow drawn as an SVG, so it takes the text color
+function Arrow({ direction }) {
+  return (
+    <svg
+      viewBox="0 0 48 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={`h-8 w-14 xl:h-10 xl:w-16 ${direction === 'right' ? 'rotate-180' : ''}`}
+    >
+      <path d="M46 12H3M13 2 3 12l10 10" />
+    </svg>
+  )
+}
+
 function Projects() {
   const scroller = useRef(null)
-  // The project whose photo viewer is open (null = closed)
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState(null) // project whose viewer is open
 
   // Scroll the row left or right by most of its visible width
   const scrollBy = (direction) => {
@@ -16,53 +33,52 @@ function Projects() {
   }
 
   const arrowClass =
-    'absolute top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center ' +
-    'justify-center rounded-full border border-brand text-white ' +
-    'hover:bg-brand md:flex'
+    'absolute top-1/2 z-10 hidden -translate-y-1/2 text-brand transition-colors ' +
+    'hover:text-accent md:block'
 
   return (
-    <section id="projects" className="mx-auto max-w-6xl scroll-mt-20 px-6 py-12 md:py-16">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-accent">
-        My work
-      </p>
-      <h2 className="text-3xl font-bold">Projects</h2>
+    <section id="projects" className="bg-projects min-h-screen pb-16 pt-32 xl:pt-44">
+      <div className="container-x">
+        <p className="text-base text-accent xl:text-2xl">My Work</p>
+        <h2 className="mt-1 text-4xl font-bold xl:text-6xl">Projects</h2>
 
-      {/* Arrows sit on the sides on larger screens; on phones you just swipe */}
-      <div className="relative mt-8 md:px-14">
-        <button type="button" onClick={() => scrollBy(-1)} aria-label="Scroll left"
-                className={`${arrowClass} left-0`}>
-          ←
-        </button>
+        {/* Arrows sit on the sides on larger screens; on phones you just swipe */}
+        <div className="relative mt-10 md:px-20">
+          <button type="button" onClick={() => scrollBy(-1)} aria-label="Scroll left"
+                  className={`${arrowClass} left-0`}>
+            <Arrow direction="left" />
+          </button>
 
-        <div
-          ref={scroller}
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4
-                     [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-        >
-          {projects.map((project, i) => (
-            <ProjectCard
-              key={project.title}
-              project={project}
-              index={i}
-              onOpen={() => setSelected(project)}
-            />
-          ))}
+          <div
+            ref={scroller}
+            className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4 pt-2
+                       [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {projects.map((project, i) => (
+              <ProjectCard
+                key={project.title}
+                project={project}
+                index={i}
+                onOpen={() => setSelected(project)}
+              />
+            ))}
+          </div>
+
+          <button type="button" onClick={() => scrollBy(1)} aria-label="Scroll right"
+                  className={`${arrowClass} right-0`}>
+            <Arrow direction="right" />
+          </button>
         </div>
 
-        <button type="button" onClick={() => scrollBy(1)} aria-label="Scroll right"
-                className={`${arrowClass} right-0`}>
-          →
-        </button>
+        {/* The key resets the photo counter whenever a different project opens */}
+        {selected && (
+          <ProjectModal
+            key={selected.title}
+            project={selected}
+            onClose={() => setSelected(null)}
+          />
+        )}
       </div>
-
-      {/* The key resets the photo counter to 1 whenever a different project opens */}
-      {selected && (
-        <ProjectModal
-          key={selected.title}
-          project={selected}
-          onClose={() => setSelected(null)}
-        />
-      )}
     </section>
   )
 }
