@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
-/* Keeps "dark:" classes working */
 @custom-variant dark (&:where(.dark, .dark *));
 
-/* Design tokens from the Figma: use them as bg-navy, bg-brand, text-accent, etc. */
+/* Colors from the Figma. Same token names as before, so existing classes still work */
 @theme {
   --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
-  --color-navy: #010736;    /* page background */
-  --color-brand: #22396F;   /* buttons, outlines, skill tags */
-  --color-accent: #7FB0FF;  /* highlights and hover */
+  --color-navy: #290044;    /* gradient start, and the photo viewer background */
+  --color-brand: #500071;   /* buttons, card borders, skill tags */
+  --color-accent: #8a2a78;  /* labels, highlights, active nav link */
 }
 
 html {
@@ -16,6 +15,27 @@ html {
 }
 
 body {
-  background-color: var(--color-navy);
+  background-color: #000000;
   color: white;
 }
+
+/* Page padding shared by every section: 108px side margins at 1920px, like the Figma */
+.container-x {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1920px;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .container-x { padding-inline: 3rem; }
+}
+@media (min-width: 1280px) {
+  .container-x { padding-inline: 108px; }
+}
+
+/* One gradient per section, exactly as set in the Figma */
+.bg-hero     { background: linear-gradient(90deg,  #290044, #000000); }
+.bg-about    { background: linear-gradient(180deg, #290044, #000000); }
+.bg-skills   { background: linear-gradient(135deg, #290044, #000000); }
+.bg-projects { background: radial-gradient(circle at 50% 50%, #290044, #000000); }
+.bg-contact  { background: radial-gradient(circle at 0% 0%,   #290044, #000000); }
