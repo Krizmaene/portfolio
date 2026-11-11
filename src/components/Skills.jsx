@@ -1,8 +1,10 @@
 import { skillGroups } from '../data/skills'
 
 const tagClass = (i) =>
-  i % 2 === 0 ? 'border-[3px] border-brand bg-brand' : 'border-[3px] border-brand'
-
+  `border-[3px] cursor-default select-none transition hover:-translate-y-1 hover:border-accent ${
+    i % 2 === 0 ? 'border-brand bg-brand' : 'border-brand'
+  }`
+  
 function Skills() {
   return (
     <section id="skills" className="bg-skills min-h-screen pb-16 pt-32">

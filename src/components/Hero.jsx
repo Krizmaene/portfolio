@@ -8,7 +8,7 @@ function Hero() {
             Aspiring UI/UX Designer and Front-End Developer
           </p>
 
-          <h1 className="mt-3 text-4xl font-bold uppercase leading-tight sm:text-5xl">
+          <h1 className="glow-name mt-3 text-3xl font-bold uppercase leading-tight sm:text-5xl">
             <span className="text-accent">Krizmaene</span> Airizh A. Magbojos
           </h1>
 
@@ -51,7 +51,7 @@ function Hero() {
         <img
           src="/profile-2.png"
           alt="Portrait of Krizmaene Airizh A. Magbojos"
-          className="w-64 shrink-0 sm:w-80"
+          className="w-72 shrink-0 sm:w-96 lg:w-[30rem]"
         />
       </div>
     </section>

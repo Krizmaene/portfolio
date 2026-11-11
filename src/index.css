@@ -36,3 +36,13 @@ body {
 .bg-skills   { background: linear-gradient(135deg, #290044, #000000); }
 .bg-projects { background: radial-gradient(circle at 50% 50%, #290044, #000000); }
 .bg-contact  { background: radial-gradient(circle at 0% 0%,   #290044, #000000); }
+
+.glow-name {
+  transition: text-shadow 0.3s ease;
+}
+.glow-name:hover {
+  text-shadow:
+    0 0 10px #8a2a78,
+    0 0 30px #8a2a78,
+    0 0 60px #500071;
+}
