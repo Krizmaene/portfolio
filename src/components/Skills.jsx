@@ -1,10 +1,8 @@
 import { skillGroups } from '../data/skills'
 
-const tagClass = (i) =>
-  `border-[3px] cursor-default select-none transition hover:-translate-y-1 hover:border-accent ${
-    i % 2 === 0 ? 'border-brand bg-brand' : 'border-brand'
-  }`
-  
+const tagClass =
+  'border-[3px] border-brand cursor-default select-none transition hover:-translate-y-1 hover:border-accent'
+
 function Skills() {
   return (
     <section id="skills" className="bg-skills min-h-screen pb-16 pt-32">
@@ -37,7 +35,7 @@ function Skills() {
                   {group.items.map((skill, i) => (
                     <li
                       key={skill}
-                      className={`rounded-full px-5 py-2 text-base ${tagClass(i)}`}
+                      className={`rounded-full px-5 py-2 text-sm ${tagClass}`}
                     >
                       {skill}
                     </li>
