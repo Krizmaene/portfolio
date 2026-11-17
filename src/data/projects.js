@@ -1,5 +1,11 @@
 export const projects = [
     {
+        title: 'AedesCapella',
+        description: ' an AIoT prototype that detects possible Aedes aegypti (dengue mosquito) activity from sound and reports events to a web dashboard for barangay health workers.',
+        images: ['/projects/aedescapella.png'],
+        github: '',
+    },
+    {
         title: 'Pinoy Recipe Finder',
         description: 'A web app for browsing Filipino recipes, with search, a favorites list, and a details page showing ingredients and instructions.',
         images: ['/projects/pinoy-recipe-finder.png'],
