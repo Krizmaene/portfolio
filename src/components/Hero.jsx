@@ -19,7 +19,7 @@ function Hero() {
           <div className="mt-8 flex flex-wrap justify-center gap-4 md:justify-start">
         
             <a
-              href="/resume.pdf"
+              href="/portfolio-resume.pdf"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-3 rounded-full bg-brand px-6 py-3
