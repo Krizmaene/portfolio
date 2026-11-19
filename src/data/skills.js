@@ -15,8 +15,8 @@ export const skillGroups = [
     ],
   },
   {
-    title: 'Databases and Tools',
-    items: ['MongoDB', 'AsyncStorage', 'Git and GitHub'],
+    title: 'Databases and AI Tools',
+    items: ['MongoDB', 'AsyncStorage', 'Git and GitHub', 'Claude', 'ChatGPT'],
   },
   {
     title: 'Design',

@@ -1,7 +1,7 @@
 export const projects = [
     {
         title: 'AedesCapella',
-        description: ' an AIoT prototype that detects possible Aedes aegypti (dengue mosquito) activity from sound and reports events to a web dashboard for barangay health workers.',
+        description: 'A team thesis on an AIoT prototype that detects possible Aedes aegypti (dengue mosquito) activity from sound and reports events to a web dashboard for barangay health workers. I worked with the team on the hardware and components',
         images: ['/projects/aedescapella.png'],
         github: '',
     },

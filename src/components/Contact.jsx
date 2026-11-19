@@ -11,7 +11,7 @@ const contactLinks = [
     },
     {
         label: 'LinkedIn',
-        value: 'linkedin.com/in/krizmaene-airizh-magbojos',
+        value: 'linkedin.com/in/krizmaeneairizhmagbojos',
         href: 'https://www.linkedin.com/in/krizmaeneairizhmagbojos',
     },
 ]
