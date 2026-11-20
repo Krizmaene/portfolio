@@ -8,7 +8,6 @@ export const skillGroups = [
     logos: [
       { name: 'React', src: '/logos/react.svg' },
       { name: 'Vite', src: '/logos/vite.svg' },
-      // white: true turns a dark logo white so it shows on the dark background
       { name: 'Expo', src: '/logos/expo.svg', white: true },
       { name: 'Tailwind CSS', src: '/logos/tailwindcss.svg' },
       { name: 'Bootstrap', src: '/logos/bootstrap.svg' },
@@ -16,7 +15,7 @@ export const skillGroups = [
   },
   {
     title: 'Databases and AI Tools',
-    items: ['MongoDB', 'AsyncStorage', 'Git and GitHub', 'Claude', 'ChatGPT'],
+    items: ['AsyncStorage', 'Git and GitHub', 'Claude', 'ChatGPT'],
   },
   {
     title: 'Design',

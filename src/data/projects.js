@@ -18,12 +18,6 @@ export const projects = [
         github: 'https://github.com/Krizmaene/midterm-project.git',
     },
     {
-        title: 'Barangay Reporting System',
-        description: 'A web-based system where residents report community concerns and barangay officials track them. I worked on the MongoDB backend and part of the front-end.',
-        images: ['/projects/barangay-reporting-system.png'],
-        github: 'https://github.com/Krizmaene/barangay-report-frontend.git',
-    },
-    {
         title: 'Job Finder',
         description: 'A mobile app that fetches job listings from an API, lets users search, save jobs without duplicates, and send an application through a form.',
         images: ['/projects/job-finder.jpg'],
@@ -34,12 +28,6 @@ export const projects = [
         description: 'A shopping app with home, cart, and checkout screens connected through React Navigation.',
         images: ['/projects/shopcart-ph.jpg'],
         github: 'https://github.com/Krizmaene/magbojos-krizmaene-react-native-navigation.git',
-    },
-    {
-        title: 'Mobile Portfolio',
-        description: 'A personal portfolio app using React Native (Expo), featuring a profile picture, short bio, skills list, and contact and social links.',
-        images: ['/projects/mobile-portfolio.jpg'],
-        github: 'https://github.com/Krizmaene/magbojos-krizmaene-mobile-portfolio.git',
     },
     {
         title: 'Travel Diary App',
