@@ -3,7 +3,7 @@ export const projects = [
         title: 'AedesCapella',
         description: 'A team thesis on an AIoT prototype that detects possible Aedes aegypti (dengue mosquito) activity from sound and reports events to a web dashboard for barangay health workers. I worked with the team on the hardware and components',
         images: ['/projects/aedescapella.png'],
-        github: '',
+        github: 'https://github.com/ArguellesMomon/AedesCapella-Dashboard.git',
     },
     {
         title: 'Pinoy Recipe Finder',
